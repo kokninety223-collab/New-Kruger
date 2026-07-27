@@ -163,6 +163,11 @@ fun FlutterAppScreen(
                 onClick = { selectedTab = 2 },
                 text = { Text("pubspec.yaml") }
             )
+            Tab(
+                selected = selectedTab == 3,
+                onClick = { selectedTab = 3 },
+                text = { Text("build-apk.yml (GitHub Actions)") }
+            )
         }
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -380,6 +385,12 @@ fun FlutterAppScreen(
             2 -> CodeViewerCard(
                 title = "pubspec.yaml (Flutter Dependencies)",
                 code = FlutterCodeTemplates.pubspecYamlCode,
+                language = "yaml"
+            )
+
+            3 -> CodeViewerCard(
+                title = ".github/workflows/build-apk.yml (GitHub Actions)",
+                code = FlutterCodeTemplates.githubWorkflowYaml,
                 language = "yaml"
             )
         }

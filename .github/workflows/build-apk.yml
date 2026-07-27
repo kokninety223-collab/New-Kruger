@@ -36,12 +36,12 @@ jobs:
       - name: Recreate Android project files
         run: flutter create . --platforms=android --project-name new_kruger
 
-      - name: Build Release APK
-        run: flutter build apk --release
+      - name: Build Debug APK
+        run: flutter build apk --debug
 
-      - name: Upload Release APK Artifact
+      - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: KrugerVPN-Release-APK
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: KrugerVPN-Debug-APK
+          path: build/app/outputs/flutter-apk/app-debug.apk
           retention-days: 7

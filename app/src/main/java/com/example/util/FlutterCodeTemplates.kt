@@ -301,6 +301,9 @@ jobs:
       - name: Get Flutter dependencies
         run: flutter pub get
 
+      - name: Recreate Android project files
+        run: flutter create . --platforms=android
+
       - name: Build Release APK
         run: flutter build apk --release
 

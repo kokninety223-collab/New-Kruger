@@ -1,0 +1,6 @@
+{
+  "name": "Kruger VPN",
+  "description": "Kruger VPN - WireGuard VPN Protection with Burmese language support and 3-tier VPS redundancy",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

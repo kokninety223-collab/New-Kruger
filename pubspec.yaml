@@ -1,0 +1,34 @@
+name: personal_vpn_controller
+description: "A Personal WireGuard VPS Client & Controller Mobile App built with Flutter."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP Client for querying WireGuard VPS controller REST API (/get-vps)
+  http: ^1.1.0
+
+  # WireGuard VPN tunnel plugin for Flutter mobile
+  wireguard_flutter: ^0.1.2
+
+  # Local preferences storage for server API URLs and keys
+  shared_preferences: ^2.2.2
+
+  # Path provider for file cache management
+  path_provider: ^2.1.1
+
+  # Cupertino Icons
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

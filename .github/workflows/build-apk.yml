@@ -36,6 +36,12 @@ jobs:
       - name: Recreate Android project files
         run: flutter create . --platforms=android --project-name new_kruger
 
+      - name: Set Android minSdkVersion 21
+        run: |
+          sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 21/g' android/app/build.gradle || true
+          sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 21/g' android/app/build.gradle || true
+          sed -i 's/minSdk flutter.minSdkVersion/minSdk 21/g' android/app/build.gradle || true
+
       - name: Build Debug APK
         run: flutter build apk --debug
 
